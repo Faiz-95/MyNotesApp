@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Note Me</string>
+    <string name="createdByText">Created by Faiz Syed Ibrahim</string>
+    <string name="appDescriptionText">A simple and easy way to take notes!</string>
+    <string name="noteMeIconDesc">Note Me Icon</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_notes_button_text">Add Notes Button</string>
+
+    <string name="save_notes_button_text">Save Notes Button</string>
+    <string name="title">Title...</string>
+    <string name="subtitle">Subtitle...</string>
+    <string name="content">_____________________________________________\n_____________________________________________\n____________________</string>
+    <string name="yellow_dot">Yellow Dot</string>
+    <string name="blue_dot">Blue Dot</string>
+    <string name="green_dot">Green Dot</string>
+    <string name="purple_dot">Purple Dot</string>
+    <string name="pink_dot">Pink Dot</string>
+    <string name="note_card_heading_text">This is a Heading</string>
+    <string name="note_card_subheading_text">This is a subheading</string>
+    <string name="note_card_date_text">Date</string>
+    <string name="general">General</string>
+    <string name="study">Study</string>
+    <string name="work">Work</string>
+    <string name="personal">Personal</string>
+    <string name="misc">Misc</string>
+    <string name="filter_icon">Filter Icon</string>
+    <string name="delete">Delete</string>
+    <string name="search">Search</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.mynotesapp.UI.Fragments.FragmentHome"
+        android:label="All Notes"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentCreateNote"
+            app:destination="@id/fragmentCreateNote" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentEditNote"
+            app:destination="@id/fragmentEditNote" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEditNote"
+        android:name="com.example.mynotesapp.UI.Fragments.FragmentEditNote"
+        android:label="Edit a Note"
+        tools:layout="@layout/fragment_edit_note" >
+        <action
+            android:id="@+id/action_fragmentEditNote_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <argument
+            android:name="data"
+            app:argType="com.example.mynotesapp.Model.Notes" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCreateNote"
+        android:name="com.example.mynotesapp.UI.Fragments.FragmentCreateNote"
+        android:label="Create a Note"
+        tools:layout="@layout/fragment_create_note" >
+        <action
+            android:id="@+id/action_fragmentCreateNote_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+</navigation>

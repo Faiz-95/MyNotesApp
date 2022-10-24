@@ -8,12 +8,15 @@ import com.example.mynotesapp.Model.Notes
 import com.example.mynotesapp.Repository.NotesRepository
 
 class NotesViewModel(application: Application): AndroidViewModel(application) {
+
     val repository: NotesRepository
 
+    //this block of code will run first
     init{
-        val dao = NotesDatabase.getDatabaseInstance(application).myNotesDao()
-        repository = NotesRepository(dao)
+        val dao = NotesDatabase.getDatabaseInstance(application).myNotesDao() //assigning the dao
+        repository = NotesRepository(dao) //assigning the repository
     }
+    //connects the functions below to NotesRepository
     fun getGeneralNotes():LiveData<List<Notes>> = repository.getGeneralNotes()
     fun getStudyNotes():LiveData<List<Notes>> = repository.getStudyNotes()
     fun getWorkNotes():LiveData<List<Notes>> = repository.getWorkNotes()

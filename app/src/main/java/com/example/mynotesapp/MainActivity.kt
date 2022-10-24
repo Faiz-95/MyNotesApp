@@ -11,12 +11,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //sets the layout file to activity_main
         setContentView(R.layout.activity_main)
 
+        //assigning navConroller to the homepage fragment view
         navController = findNavController(R.id.fragmentContainerView)
         setupActionBarWithNavController(navController)
     }
 
+    //navigation setup
     override fun onNavigateUp(): Boolean {
         return navController.navigateUp() || super.onNavigateUp()
     }

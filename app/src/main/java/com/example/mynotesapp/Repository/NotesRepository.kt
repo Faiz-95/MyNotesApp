@@ -4,7 +4,8 @@ import androidx.lifecycle.LiveData
 import com.example.mynotesapp.Dao.NotesDao
 import com.example.mynotesapp.Model.Notes
 
-class NotesRepository(val dao: NotesDao) {
+class NotesRepository (val dao: NotesDao) {
+    //connects the functions below functions to DAO
     fun getAllNotes():LiveData<List<Notes>> = dao.getAllNotes()
     fun getGeneralNotes():LiveData<List<Notes>> = dao.getGeneralNotes()
     fun getStudyNotes():LiveData<List<Notes>> = dao.getStudyNotes()

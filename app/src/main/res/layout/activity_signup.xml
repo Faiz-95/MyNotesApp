@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayoutMainSignup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/noteMeIconSignup"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/noteMeIconDesc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092"
+        app:srcCompat="@drawable/notesicon" />
+
+    <TextView
+        android:id="@+id/noteMeTextSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="456dp"
+        android:fontFamily="@font/bold"
+        android:text="@string/app_name"
+        android:textColor="#FBE24C"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/appDescriptionSignup"
+        android:layout_width="227dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="372dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="@string/appDescriptionText"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayoutSubSignup"
+        android:layout_width="354dp"
+        android:layout_height="356dp"
+        android:background="@drawable/container_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/signupText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="Sign Up"
+            android:textColor="#000000"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.019" />
+
+        <ImageView
+            android:id="@+id/userIconSignup"
+            android:layout_width="34dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.258"
+            app:srcCompat="@drawable/user" />
+
+        <EditText
+            android:id="@+id/signupUserTextView"
+            android:layout_width="267dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:fontFamily="@font/regular"
+            android:hint="Username"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.712"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.255"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/emailIconSignup"
+            android:layout_width="57dp"
+            android:layout_height="42dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.016"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.436"
+            app:srcCompat="@drawable/email" />
+
+        <EditText
+            android:id="@+id/signupEmailTextView"
+            android:layout_width="267dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:fontFamily="@font/regular"
+            android:hint="Email"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.712"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.441"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/passwordIconSignup"
+            android:layout_width="33dp"
+            android:layout_height="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.606"
+            app:srcCompat="@drawable/lock" />
+
+        <EditText
+            android:id="@+id/signupPasswordTextView"
+            android:layout_width="267dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:fontFamily="@font/regular"
+            android:hint="Password"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.712"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.617"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="297dp"
+            android:layout_height="43dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:text="Sign Up >"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.894"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Note Me</string>
+
+    <!--activity_splash_screen-->
     <string name="createdByText">Created by Faiz Syed Ibrahim</string>
     <string name="appDescriptionText">A simple and easy way to take notes!</string>
     <string name="noteMeIconDesc">Note Me Icon</string>

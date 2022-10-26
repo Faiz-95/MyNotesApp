@@ -2,13 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayoutSplash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".SplashScreen">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/noteMeIconSplash"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:contentDescription="@string/noteMeIconDesc"
@@ -21,7 +22,7 @@
         app:srcCompat="@drawable/notesicon" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/noteMeTextSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -32,10 +33,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/noteMeIconSplash" />
 
     <TextView
-        android:id="@+id/appDescription"
+        android:id="@+id/appDescriptionSplash"
         android:layout_width="227dp"
         android:layout_height="85dp"
         android:layout_marginBottom="84dp"
@@ -47,11 +48,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/noteMeTextSplash"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/createdBy"
+        android:id="@+id/createdBySplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/regular"
@@ -63,17 +64,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appDescription"
+        app:layout_constraintTop_toBottomOf="@+id/appDescriptionSplash"
         app:layout_constraintVertical_bias="0.913" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBarSplash"
         style="?android:attr/progressBarStyle"
         android:layout_width="37dp"
         android:layout_height="38dp"
         android:theme="@style/ProgressBar"
-        app:layout_constraintBottom_toTopOf="@+id/createdBy"
+        app:layout_constraintBottom_toTopOf="@+id/createdBySplash"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/appDescriptionSplash" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -126,7 +126,7 @@
             android:ems="10"
             android:fontFamily="@font/regular"
             android:hint="Email"
-            android:inputType="textPassword"
+            android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textColor="#000000"
             android:textSize="18sp"
@@ -157,7 +157,7 @@
             android:ems="10"
             android:fontFamily="@font/regular"
             android:hint="Password"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:padding="10dp"
             android:textColor="#000000"
             android:textSize="18sp"
@@ -168,6 +168,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.617"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/signupPasswordReq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- 8 character minimum"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.268"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.697" />
 
         <Button
             android:id="@+id/signupButton"
@@ -181,7 +195,7 @@
             app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.894"
+            app:layout_constraintVertical_bias="0.948"
             tools:ignore="TouchTargetSizeCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

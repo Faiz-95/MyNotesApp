@@ -34,12 +34,12 @@ class LoginActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
         auth = FirebaseAuth.getInstance()
-        var currentUser = auth.currentUser
 
         login.setOnClickListener {
             val email = emailTextView.text.toString()
             val password = passwordTextView.text.toString()
 
+            //validating email and password
             var checkedEmail = checkEmail(email)
             var checkedPassword = checkPassword(password)
 
@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
                         if (task.isSuccessful) {
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
-                            Log.e("NOTE_ME", "User successfully signed in") //create a log entry
+                            Log.i("NOTE_ME", "User successfully signed in") //create a log entry
                         }
                         else {
                             Toast.makeText(this, "Authentication Failed", Toast.LENGTH_SHORT).show() //create a toast
@@ -65,6 +65,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    //password checker
     private fun checkPassword(password: String): Boolean {
         val passwordPattern = Regex("[^A-Za-z]")
         if (password.isEmpty()){
@@ -82,6 +83,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    //email checker
     private fun checkEmail(email: String): Boolean {
         if (email.isEmpty()){
             Toast.makeText(this, "Please enter an email", Toast.LENGTH_SHORT).show() //create a toast

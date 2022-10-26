@@ -25,22 +25,25 @@ class SignupActivity : AppCompatActivity() {
 
         val signup = findViewById<Button>(R.id.signupButton)
 
+        val userTextView = findViewById<EditText>(R.id.signupUserTextView)
         val emailTextView = findViewById<EditText>(R.id.signupEmailTextView)
         val passwordTextView = findViewById<EditText>(R.id.signupPasswordTextView)
 
         // Initialize Firebase Auth
         auth = Firebase.auth
         auth = FirebaseAuth.getInstance()
-        var currentUser = auth.currentUser
 
         signup.setOnClickListener {
+            val user = userTextView.text.toString()
             val email = emailTextView.text.toString()
             val password = passwordTextView.text.toString()
 
-            var checkedEmail = checkEmail(email)
+            //validating username, email and password
+            var checkedUser = checkUsernameEmail(user)
+            var checkedEmail = checkUsernameEmail(email)
             var checkedPassword = checkPassword(password)
 
-            if (checkedEmail and checkedPassword) {
+            if (checkedUser and checkedEmail and checkedPassword) {
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
@@ -59,6 +62,7 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
+    //password checker
     private fun checkPassword(password: String): Boolean {
         val passwordPattern = Regex("[^A-Za-z]")
         if (password.isEmpty()){
@@ -76,7 +80,8 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    private fun checkEmail(email: String): Boolean {
+    //username and email checker
+    private fun checkUsernameEmail(email: String): Boolean {
         if (email.isEmpty()){
             Toast.makeText(this, "Please enter an email", Toast.LENGTH_SHORT).show() //create a toast
             Log.e("NOTE_ME", "No email entered") //create a log entry

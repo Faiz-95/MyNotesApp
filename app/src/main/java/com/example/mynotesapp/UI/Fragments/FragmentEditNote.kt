@@ -109,7 +109,11 @@ class FragmentEditNote : Fragment() {
 
     //function to update a note when the save button is clicked
     private fun updateNotes(it: View?) {
-        val title = binding.titleEditTextView.text.toString() //fetching the title typed by user
+        var title = binding.titleEditTextView.text.toString() //fetching the title typed by user
+        //checks whether title is empty or sets the below string
+        if (title.isEmpty()){
+            title = "Unnamed Note"
+        }
         val subtitle = binding.subtitleEditTextView.text.toString() //fetching the subtitle typed by user
         val content = binding.contentEditTextView.text.toString() //fetching the content typed by user
 

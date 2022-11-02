@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="#000000"
             android:textSize="27sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -80,6 +80,7 @@
             android:id="@+id/emailIconLogin"
             android:layout_width="57dp"
             android:layout_height="42dp"
+            android:contentDescription="@string/email_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.016"
@@ -94,7 +95,7 @@
             android:layout_height="45dp"
             android:ems="10"
             android:fontFamily="@font/regular"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textColor="#000000"
@@ -105,12 +106,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.255"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck"
+            android:autofillHints="" />
 
         <ImageView
             android:id="@+id/passwordIconLogin"
             android:layout_width="33dp"
             android:layout_height="28dp"
+            android:contentDescription="@string/lock_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.049"
@@ -125,7 +128,7 @@
             android:layout_height="45dp"
             android:ems="10"
             android:fontFamily="@font/regular"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:padding="10dp"
             android:textColor="#000000"
@@ -136,7 +139,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.441"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck"
+            android:importantForAutofill="no" />
 
         <Button
             android:id="@+id/loginButton"
@@ -144,7 +148,7 @@
             android:layout_height="43dp"
             android:background="@drawable/rounded_button"
             android:gravity="center"
-            android:text="Login >"
+            android:text="@string/login_button_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.508"
@@ -158,7 +162,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/medium"
-            android:text="New User?"
+            android:text="@string/new_user"
             android:textColor="#000000"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -173,7 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"
-            android:text="Sign up"
+            android:text="@string/sign_up"
             android:textColor="#000000"
             android:textSize="15sp"
             android:textStyle="italic"

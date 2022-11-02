@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bold"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
             android:textColor="#000000"
             android:textSize="27sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -80,6 +80,7 @@
             android:id="@+id/userIconSignup"
             android:layout_width="34dp"
             android:layout_height="30dp"
+            android:contentDescription="@string/user_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
@@ -94,7 +95,7 @@
             android:layout_height="45dp"
             android:ems="10"
             android:fontFamily="@font/regular"
-            android:hint="Username"
+            android:hint="@string/username"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textColor="#000000"
@@ -105,12 +106,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.255"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck"
+            android:importantForAutofill="no" />
 
         <ImageView
             android:id="@+id/emailIconSignup"
             android:layout_width="57dp"
             android:layout_height="42dp"
+            android:contentDescription="@string/email_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.016"
@@ -125,7 +128,8 @@
             android:layout_height="45dp"
             android:ems="10"
             android:fontFamily="@font/regular"
-            android:hint="Email"
+            android:hint="@string/email"
+            android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textColor="#000000"
@@ -136,12 +140,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.441"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
 
         <ImageView
             android:id="@+id/passwordIconSignup"
             android:layout_width="33dp"
             android:layout_height="28dp"
+            android:contentDescription="@string/lock_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.059"
@@ -156,7 +161,8 @@
             android:layout_height="45dp"
             android:ems="10"
             android:fontFamily="@font/regular"
-            android:hint="Password"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
             android:inputType="textPassword"
             android:padding="10dp"
             android:textColor="#000000"
@@ -167,14 +173,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.617"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck" />
 
         <TextView
             android:id="@+id/signupPasswordReq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/regular"
-            android:text="- 8 character minimum"
+            android:text="@string/_8_character_minimum"
             android:textColor="#000000"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -190,7 +196,7 @@
             android:layout_height="43dp"
             android:background="@drawable/rounded_button"
             android:gravity="center"
-            android:text="Sign Up >"
+            android:text="@string/sign_up_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.508"

@@ -6,9 +6,35 @@
     <string name="appDescriptionText">A simple and easy way to take notes!</string>
     <string name="noteMeIconDesc">Note Me Icon</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="add_notes_button_text">Add Notes Button</string>
+    <!--activity_login-->
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_button_text"><![CDATA[Login >]]></string>
+    <string name="sign_up">Sign Up</string>
+    <string name="new_user">New User?</string>
+    <string name="email_icon">Email Icon</string>
+    <string name="lock_icon">Lock Icon</string>
 
+    <!--activity_signup-->
+    <string name="username">Username</string>
+    <string name="_8_character_minimum">- 8 character minimum</string>
+    <string name="sign_up_button"><![CDATA[Sign Up >]]></string>
+    <string name="user_icon">User Icon</string>
+
+    <!--fragment_home-->
+    <string name="add_notes_button_text">Add Notes Button</string>
+    <string name="general">General</string>
+    <string name="study">Study</string>
+    <string name="work">Work</string>
+    <string name="personal">Personal</string>
+
+    <!--activity_notes_card-->
+    <string name="note_card_heading_text">This is a Heading</string>
+    <string name="note_card_subheading_text">This is a subheading</string>
+    <string name="note_card_date_text">Date</string>
+
+    <!--fragment_create_note and fragment_edit_note-->
     <string name="save_notes_button_text">Save Notes Button</string>
     <string name="title">Title...</string>
     <string name="subtitle">Subtitle...</string>
@@ -16,17 +42,16 @@
     <string name="yellow_dot">Yellow Dot</string>
     <string name="blue_dot">Blue Dot</string>
     <string name="green_dot">Green Dot</string>
-    <string name="purple_dot">Purple Dot</string>
     <string name="pink_dot">Pink Dot</string>
-    <string name="note_card_heading_text">This is a Heading</string>
-    <string name="note_card_subheading_text">This is a subheading</string>
-    <string name="note_card_date_text">Date</string>
-    <string name="general">General</string>
-    <string name="study">Study</string>
-    <string name="work">Work</string>
-    <string name="personal">Personal</string>
-    <string name="misc">Misc</string>
-    <string name="filter_icon">Filter Icon</string>
-    <string name="delete">Delete</string>
+
+    <!--search_note-->
     <string name="search">Search</string>
+
+    <!--delete_note-->
+    <string name="delete">Delete</string>
+    <string name="are_you_sure">Are you sure you want to delete\nthis note?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
 </resources>

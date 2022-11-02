@@ -37,7 +37,8 @@
             app:layout_constraintHorizontal_bias="0.448"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.104" />
+            app:layout_constraintVertical_bias="0.104"
+            tools:ignore="TextContrastCheck" />
 
         <EditText
             android:id="@+id/subtitleCreateTextView"
@@ -150,7 +151,7 @@
                 android:id="@+id/blueDotCreate"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:contentDescription="@string/purple_dot"
+                android:contentDescription="@string/blue_dot"
                 android:src="@drawable/blue_dot"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

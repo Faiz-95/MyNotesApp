@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bold"
         android:gravity="center"
-        android:text="Are you sure you want to delete\nthis note?"
+        android:text="@string/are_you_sure"
         android:textColor="@color/black"
         android:textSize="18sp" />
 
@@ -28,13 +28,12 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="#000000"
         android:fontFamily="@font/bold"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Yes"
+        android:text="@string/yes"
         android:textColor="@color/white" />
 
     <TextView
@@ -44,14 +43,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/light_grey"
         android:fontFamily="@font/bold"
         android:gravity="center"
         android:padding="10dp"
-        android:text="No"
+        android:text="@string/no"
         android:textColor="@color/black" />
 
 

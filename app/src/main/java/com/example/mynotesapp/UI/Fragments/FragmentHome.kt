@@ -108,12 +108,12 @@ class FragmentHome : Fragment() {
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
-                //to change the transparency of the other categories when 'All' is clicked
+                //to reset the transparency of the other categories when 'All' is clicked
                 binding.allButton.alpha = 1F
-                binding.generalButton.alpha = 0.4F
-                binding.studyButton.alpha = 0.4F
-                binding.workButton.alpha = 0.4F
-                binding.personalButton.alpha = 0.4F
+                binding.generalButton.alpha = 1F
+                binding.studyButton.alpha = 1F
+                binding.workButton.alpha = 1F
+                binding.personalButton.alpha = 1F
             }
         }
 

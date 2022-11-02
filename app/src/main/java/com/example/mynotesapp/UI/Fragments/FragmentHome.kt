@@ -39,6 +39,7 @@ class FragmentHome : Fragment() {
             oldNotes = notesList as ArrayList<Notes>
             adapter = NotesAdapter(notesList)
             binding.notesRecyclerView.adapter = adapter
+
         }
 
         //display only 'General' category notes (yellow) on the homepage
@@ -47,6 +48,11 @@ class FragmentHome : Fragment() {
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
+                binding.allButton.alpha = 0.4F
+                binding.generalButton.alpha = 1F
+                binding.studyButton.alpha = 0.4F
+                binding.workButton.alpha = 0.4F
+                binding.personalButton.alpha = 0.4F
             }
         }
 
@@ -56,6 +62,11 @@ class FragmentHome : Fragment() {
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
+                binding.allButton.alpha = 0.4F
+                binding.generalButton.alpha = 0.4F
+                binding.studyButton.alpha = 1F
+                binding.workButton.alpha = 0.4F
+                binding.personalButton.alpha = 0.4F
             }
         }
 
@@ -65,6 +76,11 @@ class FragmentHome : Fragment() {
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
+                binding.allButton.alpha = 0.4F
+                binding.generalButton.alpha = 0.4F
+                binding.studyButton.alpha = 0.4F
+                binding.workButton.alpha = 1F
+                binding.personalButton.alpha = 0.4F
             }
         }
 
@@ -74,15 +90,25 @@ class FragmentHome : Fragment() {
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
+                binding.allButton.alpha = 0.4F
+                binding.generalButton.alpha = 0.4F
+                binding.studyButton.alpha = 0.4F
+                binding.workButton.alpha = 0.4F
+                binding.personalButton.alpha = 1F
             }
         }
 
         //displays all notes on the homepage again
-        binding.filterIcon.setOnClickListener{
+        binding.allButton.setOnClickListener{
             viewModel.getAllNotes().observe(viewLifecycleOwner) { notesList ->
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
+                binding.allButton.alpha = 1F
+                binding.generalButton.alpha = 0.4F
+                binding.studyButton.alpha = 0.4F
+                binding.workButton.alpha = 0.4F
+                binding.personalButton.alpha = 0.4F
             }
         }
 
@@ -114,6 +140,7 @@ class FragmentHome : Fragment() {
         })
         super.onCreateOptionsMenu(menu, inflater)
     }
+
 
     //function go create a list of the filtered notes and add them to the adapter
     private fun notesFiltering(p0: String?) {

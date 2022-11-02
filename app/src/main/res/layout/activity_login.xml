@@ -5,7 +5,7 @@
     android:id="@+id/ConstraintLayoutMainLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/background_grey"
     tools:context=".SplashScreen">
 
     <ImageView
@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.092"
-        app:srcCompat="@drawable/notesicon" />
+        app:srcCompat="@raw/notesicon" />
 
     <TextView
         android:id="@+id/noteMeTextLogin"
@@ -86,7 +86,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.259"
-            app:srcCompat="@drawable/email" />
+            app:srcCompat="@raw/email" />
 
         <EditText
             android:id="@+id/loginEmailTextView"
@@ -117,7 +117,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.44"
-            app:srcCompat="@drawable/lock" />
+            app:srcCompat="@raw/lock" />
 
         <EditText
             android:id="@+id/loginPasswordTextView"

@@ -34,13 +34,13 @@ class SignupActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         signup.setOnClickListener {
-            val user = userTextView.text.toString()
-            val email = emailTextView.text.toString()
-            val password = passwordTextView.text.toString()
+            val user = userTextView.text.toString() //fetches username input of user
+            val email = emailTextView.text.toString() //fetches email input of user
+            val password = passwordTextView.text.toString() //fetches password input of user
 
             //validating username, email and password
-            var checkedUser = checkUsernameEmail(user)
-            var checkedEmail = checkUsernameEmail(email)
+            var checkedUser = checkUsernameEmail(user , "username")
+            var checkedEmail = checkUsernameEmail(email, "email")
             var checkedPassword = checkPassword(password)
 
             if (checkedUser and checkedEmail and checkedPassword) {
@@ -49,12 +49,10 @@ class SignupActivity : AppCompatActivity() {
                         if (task.isSuccessful) {
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
-                            Toast.makeText(this, "User successfully created", Toast.LENGTH_SHORT)
-                                .show() //create a toast
-                            Log.e("NOTE_ME", "New user successfully created") //create a log entry
+                            Toast.makeText(this, "User successfully created", Toast.LENGTH_SHORT).show() //create a toast
+                            Log.i("NOTE_ME", "New user successfully created") //create a log entry
                         } else {
-                            Toast.makeText(this, "User not created", Toast.LENGTH_SHORT)
-                                .show() //create a toast
+                            Toast.makeText(this, "User not created", Toast.LENGTH_SHORT).show() //create a toast
                             Log.e("NOTE_ME", "New user not created") //create a log entry
                         }
                     }
@@ -81,9 +79,9 @@ class SignupActivity : AppCompatActivity() {
     }
 
     //username and email checker
-    private fun checkUsernameEmail(email: String): Boolean {
-        if (email.isEmpty()){
-            Toast.makeText(this, "Please enter an email", Toast.LENGTH_SHORT).show() //create a toast
+    private fun checkUsernameEmail(usernameEmail: String, text: String): Boolean {
+        if (usernameEmail.isEmpty()){
+            Toast.makeText(this, "Please enter a $text", Toast.LENGTH_SHORT).show() //create a toast
             Log.e("NOTE_ME", "No email entered") //create a log entry
             return false
         }

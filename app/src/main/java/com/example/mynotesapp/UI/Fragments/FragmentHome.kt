@@ -48,6 +48,7 @@ class FragmentHome : Fragment() {
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
+                //to change the transparency of the other categories when 'General' is clicked
                 binding.allButton.alpha = 0.4F
                 binding.generalButton.alpha = 1F
                 binding.studyButton.alpha = 0.4F
@@ -62,6 +63,7 @@ class FragmentHome : Fragment() {
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
+                //to change the transparency of the other categories when 'Study' is clicked
                 binding.allButton.alpha = 0.4F
                 binding.generalButton.alpha = 0.4F
                 binding.studyButton.alpha = 1F
@@ -76,6 +78,7 @@ class FragmentHome : Fragment() {
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
+                //to change the transparency of the other categories when 'Work' is clicked
                 binding.allButton.alpha = 0.4F
                 binding.generalButton.alpha = 0.4F
                 binding.studyButton.alpha = 0.4F
@@ -90,6 +93,7 @@ class FragmentHome : Fragment() {
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
+                //to change the transparency of the other categories when 'Personal' is clicked
                 binding.allButton.alpha = 0.4F
                 binding.generalButton.alpha = 0.4F
                 binding.studyButton.alpha = 0.4F
@@ -104,6 +108,7 @@ class FragmentHome : Fragment() {
                 oldNotes = notesList as ArrayList<Notes>
                 adapter = NotesAdapter(notesList)
                 binding.notesRecyclerView.adapter = adapter
+                //to change the transparency of the other categories when 'All' is clicked
                 binding.allButton.alpha = 1F
                 binding.generalButton.alpha = 0.4F
                 binding.studyButton.alpha = 0.4F
@@ -134,7 +139,7 @@ class FragmentHome : Fragment() {
                 return false
             }
             override fun onQueryTextChange(p0: String?): Boolean {
-                notesFiltering(p0) //calls the notesFiltering function
+                notesFiltering(p0?.lowercase()) //calls the notesFiltering function and changes p0 to lowercase
                 return true
             }
         })
@@ -145,8 +150,9 @@ class FragmentHome : Fragment() {
     //function go create a list of the filtered notes and add them to the adapter
     private fun notesFiltering(p0: String?) {
         val filteredNotesList = arrayListOf<Notes>()
+        //changed user input to lowercase so that the search query does not have to be case sensitive
         for (i in oldNotes){
-            if (i.title.contains(p0!!) || (i.subtitle.contains(p0))){
+            if (i.title.lowercase().contains(p0!!) || (i.subtitle.lowercase().contains(p0))){
                 filteredNotesList.add(i)
             }
         }

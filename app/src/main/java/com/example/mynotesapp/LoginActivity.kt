@@ -36,8 +36,8 @@ class LoginActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         login.setOnClickListener {
-            val email = emailTextView.text.toString()
-            val password = passwordTextView.text.toString()
+            val email = emailTextView.text.toString() //fetches email input of user
+            val password = passwordTextView.text.toString() //fetches password input of user
 
             //validating email and password
             var checkedEmail = checkEmail(email)
@@ -59,6 +59,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        //transfers user to SignupActivity
         signup.setOnClickListener{
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)

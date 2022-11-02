@@ -80,11 +80,10 @@ class FragmentCreateNote : Fragment() {
         return binding.root
     }
 
-    
-
     //function to create a note when the save button is clicked
     private fun createNotes(it: View?) {
         var title = binding.titleCreateTextView.text.toString() //fetching the title typed by user
+        //checks whether title is empty or sets the below string
         if (title.isEmpty()){
             title = "Unnamed Note"
         }
@@ -93,6 +92,8 @@ class FragmentCreateNote : Fragment() {
 
         val formatter = DateTimeFormatter.ofPattern("dd MMMM, yyyy") //formatting the date in my preferred format
         val currentDate = LocalDate.now().format(formatter) //gets the current date
+
+        //note is only saved if the title, subtitle and content is not empty
 
         if (title=="Unnamed Note" && subtitle.isEmpty() && content.isEmpty()){
             Toast.makeText(context, "Note not created", Toast.LENGTH_SHORT).show() //create a toast
